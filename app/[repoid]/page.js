@@ -26,16 +26,17 @@ const Repopdf = ({ params }) => {
   return (
     <div className="mx-48">
       <h1 className="my-5 text-5xl capitalize">{data.reponameandowner}</h1>
-        <div className="">
-          <button onClick={convertToPDF}>DOWNLOAD PDF</button>
+      <div className="flex justify-center">
+        <button className="border-2 border-black shadow m-5 rounded mx-auto justify-items-center p-2" onClick={convertToPDF}>DOWNLOAD PDF</button>
+      </div>
+      <div className=" " ref={markdownRef}>
+        {console.log(markdownRef)}
+
+        <div className="bg-white p-8 rounded-md mb-8" ref={markdownRef}>
+          <ReactMarkdown rehypePlugins={[rehypeRaw]} components={pdfstyles}>
+            {data.field}
+          </ReactMarkdown>
         </div>
-        <div className="" ref={markdownRef}>
-      <ReactMarkdown 
-        rehypePlugins={[rehypeRaw]} // For rendering raw HTML elements inside the Markdown
-        components={pdfstyles}
-      >
-        {data.field}
-      </ReactMarkdown>
       </div>
     </div>
   );

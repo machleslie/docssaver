@@ -26,5 +26,46 @@ body {
   }
 }
 .background {
- background-color: #f2e8ca;
+ background-color: #fbfbda;
+}
+
+.hov:hover{
+  background-color: #f9f9d8;
+}
+
+font-face {
+  font-family: 'Geist Sans';
+  src: url('/fonts/GeistVF.woff') format('woff');
+  font-weight: 100 900; /* Define the weight range */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/fonts/GeistMonoVF.woff') format('woff');
+  font-weight: 100 900; /* Define the weight range */
+  font-style: normal;
+}
+@font-face{
+  font-family: 'Squatina Regular';
+  src: url('/fonts/Squatina-Regular.woff') format('woff');
+  font-weight: 100 900; /* Define the weight range */
+  font-style: normal;
+}
+
+.GeistMono{
+  font-family: "Geist Mono";
+}
+/* .GeistSansNikeeLes{
+  font-family: "Geist sans";
+} */
+.SquatinaRegular{
+  font-family:"Squatina Regular" ;
+  font-weight: 700;
+  font-size: 8rem;
+}
+
+.shadow:hover {
+  box-shadow: -6px -6px;
+
 }

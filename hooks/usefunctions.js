@@ -37,6 +37,33 @@ const useFetchReadme = async ({ queryKey }) => {
   return data;
 };
 
+// Define the showTokenRate function to retrieve and log rate limits
+const showtokenrate = async () => {
+  try {
+    // Assuming you're using Octokit to fetch rate limits from GitHub's API
+    const response = await octokit.request('GET /rate_limit');
+    const resources = response.data.resources;
+
+    return {
+      resources: {
+        core: resources.core,
+        graphql: resources.graphql,
+        search: resources.search,
+        code_search: resources.code_search,
+        source_import: resources.source_import,
+        integration_manifest: resources.integration_manifest,
+        code_scanning_upload: resources.code_scanning_upload,
+        actions_runner_registration: resources.actions_runner_registration,
+        scim: resources.scim,
+        dependency_snapshots: resources.dependency_snapshots,
+      },
+    };
+  } catch (error) {
+    return("Error fetching rate limits:", error);
+  }
+};
+
+
 const useHandleConvertToPDF = async () => {
   const markdownRef = useRef();
 
@@ -203,4 +230,5 @@ export {
   useSavedrepos,
   useGetrepo,
   pdfstyles,
+  showtokenrate,
 };

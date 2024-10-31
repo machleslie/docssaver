@@ -3,16 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import ReactQueryProvider from "@/utils/Reactqueryprovider";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+
 
 export const metadata = {
   title: "Create Next App",
@@ -24,10 +15,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <ReactQueryProvider>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased background`}
+          className={`antialiased background GeistMono`}
         >
           <Navbar />
-
           {children}
         </body>
       </ReactQueryProvider>

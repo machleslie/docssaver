@@ -1,9 +1,13 @@
 import Link from "next/link";
+import TokenrateWarning from "./tokenwarning";
 
 const Navbar = () => {
   return (
+
     <Link href="/">
-      <nav className="mx-48 pt-10 text-4xl">Docs Saver</nav>
+      <TokenrateWarning/>
+      <nav className="mx-48 pt-10 mb-10 text-4xl SquatinaRegular">Docs Saver</nav>
+
     </Link>
   );
 };
