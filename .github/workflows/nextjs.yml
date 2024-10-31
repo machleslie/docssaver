@@ -48,6 +48,8 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+      - name: Install pnpm
+        run: corepack enable && corepack prepare pnpm@latest --activate
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
