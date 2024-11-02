@@ -16,11 +16,11 @@ const Repopdf = ({ params }) => {
   });
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div className="mx-48 my-20 text-4xl">Loading...</div>;
   }
 
   if (isError) {
-    return <div>Error fetching data</div>;
+    return <div className="mx-48 my-20 text-4xl">Error fetching data</div>;
   }
 
   return (
