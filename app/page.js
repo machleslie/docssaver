@@ -51,9 +51,7 @@ export default function Home() {
       <div className="heading text-center text-4xl font-bold">
         Save Docs as PDF
       </div>
-    {showtokenrate && <div className="tokenrate text-center text-2xl font-bold">
-        {showtokenrate}
-    </div>}
+   
       <div className="search">
         <div className="block text-center">
           <label htmlFor="searchrepo " className={`m-2 text-2xl GeistMono`}>
