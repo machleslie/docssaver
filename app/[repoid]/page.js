@@ -6,11 +6,6 @@ import rehypeRaw from "rehype-raw";
 import { pdfstyles } from "@/hooks/usefunctions";
 import useHandleConvertToPDF from "@/hooks/useHandleConvertToPDF";
 
-// Add generateStaticParams export
-export async function generateStaticParams() {
-  
-  return [];
-}
 
 const Repopdf = ({ params }) => {
   const repoid = decodeURIComponent(params.repoid);
